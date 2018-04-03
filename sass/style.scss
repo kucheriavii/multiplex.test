@@ -1,0 +1,202 @@
+html, body{
+  min-height  : 100%;
+  width       : 100%;
+  height      : 100%;
+}
+body{
+  background-color: #ccc;
+}
+.wrap{
+  background-color  : #9d9d9d;
+  height            : 100%;
+  width             : 100%;
+}
+.popup{
+  width             : 80%;
+  height            : 80%;
+  min-height        : 700px;
+  position          : absolute;
+  //top               : 50%;
+  //left              : 50%;
+ // transform         : translate(-50%, -50%);
+  display           : flex;
+  background-color  : #fff;
+  z-index           : 999;
+  margin-top        : 20px;
+  @media screen and (max-width: 768px){
+    flex-wrap : wrap;
+    overflow: auto;
+  }
+  .close{
+    position : absolute;
+    top      : 0px;
+    right    : -30px;
+    opacity  : 1;
+    color    : #ffffff;
+    @media screen and (max-width: 768px){
+      right: 0;
+      z-index: 99;
+      font-size: 35px;
+    }
+  }
+}
+.popup__promo{
+  background-image  : url("../img/fon.jpg");
+  background-size   : cover;
+  height            : 100%;
+  width             : 62%;
+  position          : relative;
+  @media screen and (max-width: 768px){
+    width : 100%;
+  }
+}
+
+.logo{
+  width           : 100%;
+  display         : flex;
+  justify-content : center;
+  margin-top      : 40px;
+  a{
+    display : block;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  img{
+    display     : block;
+    max-width   : 100%;
+    object-fit  : contain;
+  }
+}
+
+.popup__promo-text{
+  font-family   : Arial, sans-serif;
+  text-align    : center;
+  color         : #fff;
+  position      : absolute;
+  bottom        : 20px;
+  width         : 100%;
+  h1{
+    font-size     : 50px;
+    margin-bottom : 40px;
+    font-weight    : bold;
+    @media screen and (max-width: 768px){
+      font-size: 32px;
+    }
+  }
+  h2{
+    font-size     : 24px;
+    margin-bottom : 40px;
+  }
+  .powered{
+    text-transform  : uppercase;
+    font-size       : 18px;
+  }
+}
+.popup__rate{
+  position  : relative;
+  width     : 38%;
+  min-width : 350px;
+  @media screen and (max-width: 768px){
+   min-width : 100%;
+  }
+}
+.popup__rate-text{
+  h2{
+    font-size   : 40px;
+    display     : block;
+    width       : 80%;
+    text-align  : center;
+    margin      : 0 auto;
+    font-family : aral, sans-serif;
+    font-weight : bold;
+    color       : #424a54;
+    margin-top  : 30px;
+  }
+}
+
+.rate-list{
+  display       : block;
+  margin        : 0;
+  padding       : 0;
+  margin-top    : 30px;
+  margin-bottom : 100px;
+  .rate-item{
+    display       : block;
+    margin        : 0 auto;
+    padding       : 0;
+    height        : 50px;
+    width         : 90%;
+    border-radius : 10px;
+    border        : 1px solid #9d9d9d;
+    margin-bottom : 35px;
+    position      : relative;
+    &:before{
+      content           : "";
+      display           : block;
+      height            : 30px;
+      width             : 30px;
+      background-image  : url("../img/1.png");
+      position          : absolute;
+      left              : 10px;
+      top               : 50%;
+      transform         : translateY(-50%);
+      background-size   : contain;
+    }
+    &:nth-child(2):before{
+      background-image: url("../img/2.png");
+    }
+    &:nth-child(3):before{
+      background-image: url("../img/3.png");
+    }
+    &:nth-child(4):before{
+      background-image: url("../img/4.png");
+    }
+    &:nth-child(5):before{
+      background-image: url("../img/5.png");;
+    }
+  }
+  .rate-link{
+    color         : #424a54;
+    display       : block;
+    text-align    : center;
+    line-height   : 50px;
+    font-size     : 35px;
+  }
+}
+.rate-buttons-box{
+  display         : flex;
+  height          : 65px;
+  position        : absolute;
+  bottom          : 0;
+  width           : 100%;
+  line-height     : 65px;
+  text-align      : center;
+  font-size       : 35px;
+  text-transform  : uppercase;
+  border          : 1px solid #9d9d9d;
+  cursor          : pointer;
+  &:hover{
+    text-decoration : none;
+  }
+  .button-cancel{
+    width       : 50%;
+    color       : #9d9d9d;
+    box-shadow  : 0px -6px 10px #ccc;
+  }
+  .button-ok{
+    width         : 50%;
+    color         : #ffffff;
+    background    : #f00;
+  }
+}
+.button-popup {
+  width         : 200px;
+  height        : 60px;
+  position      : absolute;
+  top           : 50%;
+  left          : 50%;
+  text-align    : center;
+  transform     : translate(-50%, -50%);
+  background    : #fff;
+  line-height   : 60px;
+}
